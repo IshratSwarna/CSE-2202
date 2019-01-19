@@ -27,7 +27,7 @@ int main()
     cin>>n;
     int weight[n+2];
     int profit[n+2];
-    weight[0] = 0; profit[0] = 1;
+    weight[0] = 0; profit[0] = 0;
     for(int i=1;i<=n;i++)
         cin>>weight[i]>>profit[i];
     int Kw;
