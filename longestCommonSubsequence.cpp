@@ -46,3 +46,12 @@ int main()
     LCS(s1,s2,l1,l2);
     return 0;
 }
+
+/*****
+INPUT:
+    GXTXAYB
+    AGGTAB
+OUTPUT:
+    Total Characters of Longest Common Subsequence :4
+    G T A B
+*****/
