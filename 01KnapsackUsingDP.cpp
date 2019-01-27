@@ -19,6 +19,28 @@ int Knapsack(int *weight,int *profit,int TW, int n)
             }
         }
     }
+    cout<<"Weights\t\tObjects\n";
+    cout<<"////\t\t";
+    for(i=0;i<=n;i++)
+        cout<<i<<"\t";
+    cout<<"////-------------------------------------------\n";
+    for(i=0;i<=TW;i++){
+        cout<<i<<"\t\t";
+        for(j=0;j<=n;j++)
+            cout<<Box[i][j]<<"\t";
+        cout<<endl;
+    }
+    cout<<endl<<"Collected Weights : ";
+    i = TW ; j = 4;
+    while(i>0 || j>0){
+        if(Box[i][j] == Box[i][j-1])
+            j--;
+        else{
+            cout<<weight[j] <<" ";
+            i = i - weight[j];
+        }
+    }
+    cout<<endl;
     return Box[TW][n];
 }
 int main()
@@ -34,19 +56,43 @@ int main()
     printf("\nKnapsack Weight : ");
     cin>>Kw;
     int ans = Knapsack(weight,profit,Kw,n);
-    printf("\nMaximum Profit gain : ");
+    printf("\nMaximum Profit gain : \n");
     cout<<ans<<endl;
     return 0;
 }
 
-/*** Input                  Output
-4                           Maximum Profit gain : 14
+/*** 
+/////Input     
+4
 2 3
 3 4
 4 5
 5 6
 
 Knapsack Weight : 11
+
+/////Output
+Weights         Objects
+///             0       1       2       3       4
+///--------------------------------------------------
+0               0       0       0       0       0
+1               0       0       0       0       0
+2               0       3       3       3       3
+3               0       3       4       4       4
+4               0       3       4       5       5
+5               0       3       7       7       7
+6               0       3       7       8       8
+7               0       3       7       9       9
+8               0       3       7       9       10
+9               0       3       7       12      12
+10              0       3       7       12      13
+11              0       3       7       12      14
+
+Collected Weights : 5 4 2
+
+Maximum Profit gain :
+14
+
 **/
 
 
