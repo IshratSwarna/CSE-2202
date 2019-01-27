@@ -1,3 +1,5 @@
+///Given a set of coins and a value(tk) . Find if it's possible to change the the given value with the coins of given set....
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -55,3 +57,20 @@ int main()
     functn(coin,cn,TK);
     return 0;
 }
+
+/*****
+///Input
+Enter the size of set  : 3
+Enter the coins :
+2 3 4
+Enter the check value : 8
+
+///Output
+
+1 0 0 0 0 0 0 0 0
+1 0 1 0 0 0 0 0 0
+1 0 1 1 0 1 0 0 0
+1 0 1 1 1 1 1 1 0
+Not Possible
+
+******/
